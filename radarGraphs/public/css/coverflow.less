@@ -1,0 +1,29 @@
+.cover-flow {
+
+    .img-holder {
+        display: inline-block;
+        width: 40px;
+        -webkit-perspective: 500;
+        -webkit-transition: all .5s;
+
+        .my-img {
+            width: 100px;
+            -webkit-transform-style: preserve-3d;
+            -webkit-transition: all .5s;
+
+            &.left {
+                -webkit-transform: rotateY(66deg);
+            }
+
+            &.right {
+                -webkit-transform: rotateY(-66deg);
+            }
+        }
+
+        &.normal {
+            width: 100px;
+            position: relative;
+            left: 30px;
+        }
+    }
+}

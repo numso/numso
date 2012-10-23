@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Slenderman Presentation</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div id="impress">
+        <div id="title" class="step" data-x="-1000" data-y="-1500">
+            <p>Slenderman</p>
+        </div>
+        <div id="author" class="step" data-x="-1220" data-y="-1400" data-rotate-x="20" data-rotate-y="-50" data-rotate-z="30">
+            <p>By Dallin Osmun</p>
+        </div>
+
+        <div id="whois" class="step" data-x="-200" data-y="-1500" data-rotate="0">
+            <p>Who is the Slenderman?</p>
+        </div>
+        <div id="noface" class="step" data-x="-200" data-y="-1400" data-scale=".5">
+            <p>He's got no face</p>
+        </div>
+        <div id="blacksuit" class="step" data-x="-200" data-y="-1300" data-scale=".5">
+            <p>He wears a black suit</p>
+        </div>
+        <div id="kidnaps" class="step" data-x="-200" data-y="-1200" data-scale=".5">
+            <p>And he kidnaps children</p>
+        </div>
+
+        <div id="whois2" class="step" data-x="500" data-y="-1500" data-rotate-z="270">
+            <p>He looks a bit like this</p>
+            <img src="http://4.bp.blogspot.com/-hS61fGGqt2Q/UC0FKJdETnI/AAAAAAAAAIw/apkJygSqs3E/s1600/slender.jpg">
+        </div>
+        <div id="wherefrom" class="step" data-x="600" data-y="-1200" data-rotate-x="-90">
+            <p>Where does he come from?</p>
+        </div>
+
+        <div id="grossmann" class="step" data-x="500" data-y="-2300" data-rotate-z="270">
+            <p>He was originally der grossmann.</p>
+        </div>
+        <div id="rumors" class="step" data-x="-200" data-y="-2000" data-rotate-z="180">
+            <p>Came from a 1600's rumor</p>
+        </div>
+
+        <div id="getInvolved" class="step" data-x="-1800" data-y="-1500" data-rotate-z="90">
+            <p>How can you get involved you ask?</p>
+        </div>
+        <div id="downloadIt" class="step" data-x="-1800" data-y="-2000" data-rotate-z="90">
+            <p>Go <a href="">download</a> and play the Slender Game!</p>
+        </div>
+        <div id="reactionVideos" class="step" data-x="-2100" data-y="-2100" data-rotate-z="90">
+            <p>Or watch the <a href="">reaction videos</a> :)</p>
+        </div>
+
+        <div id="warning" class="step" data-x="-1000" data-y="-2000" data-rotate-z="180">
+            <p>So next time you're outside, in the dark, alone, You know who's out there!...</p>
+        </div>
+
+        <div id="slenderAgain" class="step" data-x="-1000" data-y="-1500"></div>
+
+        <div id="thanks" class="step" data-x="-600" data-y="-1500" data-scale="3">
+            <p>Thanks for watching!</p>
+            <p>@dallinosmun</p>
+        </div>
+    </div>
+
+    <script src="js/lib/impress.js"></script>
+    <script>
+        var el = document.getElementById("impress");
+        impress().init();
+
+        var slenderAgain = document.getElementById("title");
+
+        el.addEventListener("impress:stepenter", function (event) {
+            switch (event.target.id) {
+            case "title":
+                console.log("\n\nOk, you're on the title. Time to start your presentation");
+                break;
+            case "author":
+                console.log("\n\nAuthor: Dallin Osmun");
+                break;
+            case "whois":
+                console.log("\n\nWho is slenderman? Next three slides are about him");
+                break;
+            case "noface":
+                console.log("\n\nHe has no face");
+                break;
+            case "blacksuit":
+                console.log("\n\nHe wears a black suit");
+                break;
+            case "kidnaps":
+                console.log("\n\nhe kidnaps kids. The next slide shows a picture of him.");
+                break;
+            case "whois2":
+                console.log("\n\nthere it is. the next slide is a question: where is he from");
+                break;
+            case "wherefrom":
+                console.log("\n\nthe next slide is going to go across the board.");
+                break;
+            case "grossmann":
+                console.log("\n\ntalk about the german legend of der grossmann and how it means fat man.");
+                break;
+            case "rumors":
+                console.log("\n\ntalk about rumors from the 1600s");
+                break;
+            case "getInvolved":
+                console.log("\n\nhow can you get involved? Rile up the crowd. Make them want it.");
+                break;
+            case "downloadIt":
+                console.log("\n\nexplain how to download the slender game.");
+                break;
+            case "reactionVideos":
+                console.log("\n\nwarn your group. they don't want to watch these vids until they've played the game.");
+                break;
+            case "warning":
+                console.log("\n\nfinal slides - watch out while you're outside because who's out there?...");
+                break;
+            case "slenderAgain":
+                slenderAgain.classList.add("darken");
+                console.log("\n\nSLENDERMAN");
+                break;
+            case "thanks":
+                el.classList.add("darken");
+                console.log("\n\nNow you're at the overview. ask for questions.");
+                break;
+            default:
+                console.log("default");
+            }
+        }, false);
+
+        el.addEventListener("impress:stepleave", function (event) {
+            slenderAgain.classList.remove("darken");
+            el.classList.remove("darken");
+        }, false);
+    </script>
+</body>
+</html>
