@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+}
+body #container {
+  width: 100%;
+}
+body #container canvas {
+  width: 100%;
+  background-color: #c5c5f7;
+}
