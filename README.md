@@ -3,7 +3,7 @@
 <br />
 <br />
 <br />
-<center>This page intentionally left blank</center>
+<p align="center">This page intentionally left blank</p>
 <br />
 <br />
 <br />
